@@ -1,26 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
 
 @font-face {
-    font-family: "LiAdorNoirrit";
-    src: url("fonts/Li Ador Noirrit Regulars.ttf") format("truetype");
-    font-weight: 400;
+  font-family: "Li Ador Noirrit";
+  src: url("./assets/fonts/Li_Ador_Noirrit_Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "LiAdorNoirrit";
-    src: url("fonts/Li Ador Noirrit SemiBold.ttf") format("truetype");
-    font-weight: 600;
+  font-family: "Li Ador Noirrit";
+  src: url("assets/fonts/Li_Ador_Noirrit_SemiBold.ttf") format("truetype");
+  font-weight: 600;
 }
 
 @font-face {
-    font-family: "LiAdorNoirrit";
-    src: url("fonts/Li Ador Noirrit Bold.ttf") format("truetype");
-    font-weight: 700;
+  font-family: "Li Ador Noirrit";
+  src: url("assets/fonts/Li_Ador_Noirrit_Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: "LiAdorNoirrit";
-    src: url("fonts/Li Ador Noirrit Italic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
+  font-family: "Li Ador Noirrit";
+  src: url("assets/fonts/Li_Ador_Noirrit_Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@theme {
+  --color-primary: #20665c;
+  --color-hover: #2f8a7e;
+  --color-hover2: #d28a47;
+  --color-secondary: #bf7839;
+  --color-text: #1b1c1c;
+  --color-bg: #fafffe;
+  --color-container: #ffffff;
+  --font-ador: "Li Ador Noirrit";
+  --font-nunito: "Nunito", sans-serif;
+  --font-philosopher: "Philosopher", sans-serif;
+}
+
+body {
+  font-family: var(--font-nunito), var(--font-ador), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-philosopher), var(--font-ador), sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.max-width {
+  max-width: 1200px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .max-width {
+    padding-inline: 1rem;
+  }
 }
