@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "LiAdorNoirrit";
+    src: url("fonts/Li Ador Noirrit Regulars.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "LiAdorNoirrit";
+    src: url("fonts/Li Ador Noirrit SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "LiAdorNoirrit";
+    src: url("fonts/Li Ador Noirrit Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "LiAdorNoirrit";
+    src: url("fonts/Li Ador Noirrit Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
