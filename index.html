@@ -6,23 +6,42 @@
     <link href="./src/output.css" rel="stylesheet" />
     <title>Baitul Haque Jame Masjid</title>
   </head>
-  <body>
-    <div class="flex flex-col items-center justify-center h-screen">
-      <h1 class="text-4xl font-bold mb-4">Hello, World!</h1>
-      <p class="text-lg text-gray-600">
-        Welcome to Baitul Haque Jame Masjid. This is a simple webpage styled
-        with Tailwind CSS.
-      </p>
-      <p class="font-normal">বাংলা Regular</p>
-      <p class="font-semibold">বাংলা SemiBold</p>
-      <p class="font-bold">বাংলা Bold</p>
-      <p class="italic">বাংলা Italic</p>
-      <h3 class="text-3xl">without font</h3>
+  <body class="bg-bg">
+    <!-- ======== Header Section Starts Here ======== -->
 
-      <p class="">বাংলা Regular</p>
-      <p class="font-semibold">বাংলা SemiBold</p>
-      <p class="font-bold">বাংলা Bold</p>
-      <p class="italic">বাংলা Italic</p>
-    </div>
+    <header class="py-5 max-width flex justify-between items-center">
+      <a href="/">
+        <img
+          src="./src/assets/images/logo.png"
+          alt="Logo"
+          width="150"
+          height="50"
+          class="object-contain"
+        />
+      </a>
+      <div class="flex items-center gap-5">
+        <div class="rounded-md border border-[#20665C]/20 flex overflow-clip">
+          <button
+            class="px-3 py-1.5 h-full bg-primary text-container font-philosopher"
+          >
+            Eng
+          </button>
+          <button class="px-3 py-1.5 h-full bg-transparent text-text">
+            বাংলা
+          </button>
+        </div>
+        <a
+          href="/"
+          class="px-3 py-1.5 bg-primary hover:bg-hover duration-300 text-container font-bold rounded-md font-philosopher"
+        >
+          Want to visit !
+        </a>
+      </div>
+    </header>
+
+    <!-- ======== Header Section Ends Here ======== -->
+
+    <!-- ======== Footer Section Starts Here ======== -->
+    <!-- ======== Footer Section Ends Here ======== -->
   </body>
 </html>
