@@ -36,10 +36,12 @@
   --font-ador: "Li Ador Noirrit";
   --font-nunito: "Nunito", sans-serif;
   --font-philosopher: "Philosopher", sans-serif;
+  --shadow-main: 0 2px 10px rgba(27, 28, 28, 0.1);
 }
 
 body {
   font-family: var(--font-nunito), var(--font-ador), sans-serif;
+  @apply text-text;
 }
 
 h1,
@@ -56,13 +58,8 @@ button {
 }
 
 .max-width {
-  max-width: 1200px;
+  max-width: 1232px;
+  padding-inline: 16px;
   margin-inline: auto;
   width: 100%;
-}
-
-@media (max-width: 768px) {
-  .max-width {
-    padding-inline: 1rem;
-  }
 }
