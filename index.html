@@ -1,290 +1,316 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="./src/vendor/all.min.css" />
+        <!-- font awesome -->
+        <link rel="stylesheet" href="./src/vendor/all.min.css" />
 
-    <!-- main css -->
-    <link href="./src/output.css" rel="stylesheet" />
-    <title>Baitul Haque Jame Masjid</title>
-  </head>
-  <body class="bg-bg">
-    <!-- ======== Header Section Starts Here ======== -->
+        <!-- main css -->
+        <link href="./src/output.css" rel="stylesheet" />
+        <title>Baitul Haque Jame Masjid</title>
+    </head>
+    <body class="bg-bg">
+        <!-- ======== Header Section Starts Here ======== -->
 
-    <header
-      class="py-5 max-width flex justify-between items-center sticky top-0 z-10 bg-container border-b border-primary/20"
-    >
-      <a href="/">
-        <img
-          src="./src/assets/images/logo.png"
-          alt="Logo"
-          width="150"
-          height="50"
-          class="object-contain hidden sm:block"
-        />
-        <img
-          src="./src/assets/images/logo.png"
-          alt="Logo"
-          width="120"
-          height="40"
-          class="object-contain block sm:hidden"
-        />
-      </a>
-      <div class="flex items-center gap-3 sm:gap-5">
+        <header
+            class="py-5 max-width flex justify-between items-center sticky top-0 z-10 bg-container border-b border-primary/20"
+        >
+            <a href="/">
+                <img
+                    src="./src/assets/images/logo.png"
+                    alt="Logo"
+                    width="150"
+                    height="50"
+                    class="object-contain hidden sm:block"
+                />
+                <img
+                    src="./src/assets/images/logo.png"
+                    alt="Logo"
+                    width="120"
+                    height="40"
+                    class="object-contain block sm:hidden"
+                />
+            </a>
+            <div class="flex items-center gap-3 sm:gap-5">
+                <div
+                    class="rounded-md border border-[#20665C]/20 overflow-clip hidden sm:flex"
+                >
+                    <button
+                        class="px-3 py-1.5 h-full bg-primary text-container font-philosopher"
+                    >
+                        Eng
+                    </button>
+                    <button class="px-3 py-1.5 h-full bg-transparent text-text">
+                        বাংলা
+                    </button>
+                </div>
+                <a
+                    href="/"
+                    class="text-xs sm:text-base px-3 py-1.5 bg-primary hover:bg-hover duration-300 text-container font-bold rounded-md font-philosopher"
+                >
+                    Want to visit !
+                </a>
+                <button class="flex sm:hidden" id="menu">
+                    <i class="fa-solid fa-bars text-2xl text-text"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- ======== SidePanel Starts Here ======== -->
         <div
-          class="rounded-md border border-[#20665C]/20 overflow-clip hidden sm:flex"
+            class="fixed top-0 left-0 w-full h-screen bg-black/70 z-99999999 sm:hidden block invisible opacity-0"
+            id="sidepanel"
         >
-          <button
-            class="px-3 py-1.5 h-full bg-primary text-container font-philosopher"
-          >
-            Eng
-          </button>
-          <button class="px-3 py-1.5 h-full bg-transparent text-text">
-            বাংলা
-          </button>
+            <div
+                class="w-[80%] bg-bg h-full -translate-x-full duration-400"
+                id="sidepanel-content"
+            >
+                <div
+                    class="px-4 py-2 border-b border-primary/20 flex justify-between items-center bg-container"
+                >
+                    <img
+                        src="./src/assets/images/logo.png"
+                        alt="Brand Logo"
+                        width="120"
+                        height="40"
+                        class="object-contain"
+                    />
+                    <button class="flex" id="closeMenu">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+                <ul
+                    id="sidepanel-links"
+                    class="p-4 flex flex-col gap-2.5 **:font-bold **:font-philosopher **:text-text **:leading-7.5"
+                >
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Prayer Time</a></li>
+                    <li><a href="#">Donate Now</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="/">Gallery</a></li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">Privacy Policy</a></li>
+                    <li><a href="/">Terms & Condition</a></li>
+                </ul>
+            </div>
         </div>
-        <a
-          href="/"
-          class="text-xs sm:text-base px-3 py-1.5 bg-primary hover:bg-hover duration-300 text-container font-bold rounded-md font-philosopher"
-        >
-          Want to visit !
-        </a>
-        <button class="flex sm:hidden">
-          <i class="fa-solid fa-bars text-2xl text-text"></i>
-        </button>
-      </div>
-    </header>
+        <!-- ======== SidePanel Ends Here ======== -->
 
-    <!-- ======== SidePanel Starts Here ======== -->
-    <div
-      class="fixed top-0 left-0 w-full h-screen bg-black/70 z-99999999 block sm:hidden"
-      style="display: none"
-    >
-      <div class="w-[80%] bg-bg h-full">
-        <div
-          class="px-4 py-2 border-b border-primary/20 flex justify-between items-center bg-container"
-        >
-          <img
-            src="./src/assets/images/logo.png"
-            alt="Brand Logo"
-            width="120"
-            height="40"
-            class="object-contain"
-          />
-          <button class="flex">
-            <i class="fa-solid fa-xmark text-xl"></i>
-          </button>
-        </div>
-        <ul
-          class="p-4 flex flex-col gap-2.5 **:font-bold **:font-philosopher **:text-text **:leading-7.5"
-        >
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Prayer Time</a></li>
-          <li><a href="/">Donate Now</a></li>
-          <li><a href="/">About Us</a></li>
-          <li><a href="/">Gallery</a></li>
-          <li><a href="/">Contact</a></li>
-          <li><a href="/">Privacy Policy</a></li>
-          <li><a href="/">Terms & Condition</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- ======== SidePanel Ends Here ======== -->
+        <!-- ======== Header Section Ends Here ======== -->
 
-    <!-- ======== Header Section Ends Here ======== -->
+        <!-- ======== Fixed Language Buttons Starts Here ======== -->
+        <div class="fixed bottom-10 right-4 z-20 block sm:hidden">
+            <button
+                class="size-12 rounded-full bg-secondary shrink-0 flex justify-center items-center shadow-main"
+                id="languageToggle"
+            >
+                <img
+                    src="./src/assets/icons/world-o.svg"
+                    alt="World Icon"
+                    class="size-6 object-contain shrink-0"
+                />
+            </button>
+            <div
+                id="languageOptions"
+                class="absolute right-0 bottom-14 rounded-md p-2.5 flex flex-col gap-2 bg-container shadow-main border border-primary/10 invisible opacity-0 duration-300 scale-y-0 origin-bottom"
+            >
+                <button
+                    class="bg-primary border border-primary w-25 py-1.5 text-center text-sm leading-6 font-semibold text-white rounded-md"
+                >
+                    Eng
+                </button>
+                <button
+                    class="bg-bg border border-primary/20 w-25 py-1.5 text-center text-sm leading-6 font-semibold text-text rounded-md"
+                >
+                    বাংলা
+                </button>
+            </div>
+        </div>
+        <!-- ======== Fixed Language Buttons Ends Here ======== -->
 
-    <!-- ======== Fixed Language Buttons Starts Here ======== -->
-    <div class="fixed bottom-10 right-4 z-20 block sm:hidden">
-      <button
-        class="size-12 rounded-full bg-secondary shrink-0 flex justify-center items-center shadow-main"
-      >
-        <img
-          src="./src/assets/icons/world-o.svg"
-          alt="World Icon"
-          class="size-6 object-contain shrink-0"
-        />
-      </button>
-      <div
-        class="absolute right-0 bottom-14 rounded-md p-2.5 flex flex-col gap-2 bg-container shadow-main border border-primary/10"
-      >
-        <button
-          class="bg-primary border border-primary w-25 py-1.5 text-center text-sm leading-6 font-semibold text-white rounded-md"
-        >
-          Eng
-        </button>
-        <button
-          class="bg-bg border border-primary/20 w-25 py-1.5 text-center text-sm leading-6 font-semibold text-text rounded-md"
-        >
-          বাংলা
-        </button>
-      </div>
-    </div>
-    <!-- ======== Fixed Language Buttons Ends Here ======== -->
+        <!-- ======== Footer Section Starts Here ======== -->
+        <footer class="border-t border-primary/40">
+            <div
+                class="pt-15 pb-10 max-width flex flex-wrap lg:flex-nowrap xl:gap-14 lg:gap-10 gap-5 justify-between"
+            >
+                <div class="flex flex-col gap-6 w-full lg:w-[25%] shrink-0">
+                    <img
+                        src="./src/assets/images/logo.png"
+                        alt="Brand Logo"
+                        width="150"
+                        height="58"
+                        class="object-contain shrink-0"
+                    />
+                    <p class="text-text leading-6.5">
+                        A blessed house of Allah, dedicated to prayer, learning,
+                        unity, and serving the community with faith and
+                        compassion.
+                    </p>
+                    <a
+                        href="/"
+                        class="py-2 px-4 bg-primary hover:bg-hover duration-300 rounded-md text-container font-bold flex items-center justify-center gap-2 md:max-w-52 lg:max-w-full"
+                        ><span>Donate Now</span
+                        ><img
+                            src="./src/assets/icons/circle-arrow-right.svg"
+                            alt="Circle Arrow Right"
+                            class="size-5"
+                    /></a>
+                </div>
+                <div class="flex flex-col gap-6 sm:shrink-0">
+                    <h2
+                        class="text-lg sm:text-xl text-text font-bold font-philosopher"
+                    >
+                        Quick Links
+                    </h2>
+                    <ul class="flex flex-col gap-2 sm:gap-4">
+                        <li>
+                            <a
+                                href="/"
+                                class="font-semibold text-text hover:text-secondary duration-300"
+                                >Homepage</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/"
+                                class="font-semibold text-text hover:text-secondary duration-300"
+                                >Prayer Times</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/"
+                                class="font-semibold text-text hover:text-secondary duration-300"
+                                >About Us</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/"
+                                class="font-semibold text-text hover:text-secondary duration-300"
+                                >Privacy Policy</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/"
+                                class="font-semibold text-text hover:text-secondary duration-300"
+                                >Terms & Condition</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-6 sm:shrink-0">
+                    <h2
+                        class="text-lg sm:text-xl text-text font-bold font-philosopher"
+                    >
+                        Contact
+                    </h2>
+                    <ul class="flex flex-col gap-2 sm:gap-4">
+                        <li class="flex items-start gap-5">
+                            <span class="mt-1"
+                                ><i
+                                    class="fa-solid fa-location-dot text-primary text-lg"
+                                ></i
+                            ></span>
+                            <address class="not-italic text-text font-medium">
+                                Kayestogram (Kushumbag),<br />
+                                Hetimgonj, Golapgonj, Sylhet
+                            </address>
+                        </li>
+                        <li class="flex items-center gap-5">
+                            <img
+                                src="./src/assets/icons/light_mail-rounded.svg"
+                                alt="Light Mail Rounded Icon"
+                                class="size-5 object-contain"
+                            />
+                            <a
+                                href="mailto:info@example.com"
+                                class="font-semibold text-text hover:text-secondary duration-300"
+                                >info@example.com</a
+                            >
+                        </li>
+                        <li class="flex items-center gap-5">
+                            <i
+                                class="fa-solid fa-phone text-primary text-sm sm:text-base"
+                            ></i>
+                            <a
+                                href="tell:+8801712345678"
+                                class="font-semibold text-text hover:text-secondary duration-300"
+                                >+880 1712 345678</a
+                            >
+                        </li>
+                        <li class="flex items-center gap-5">
+                            <i
+                                class="fa-solid fa-phone text-primary text-sm sm:text-base"
+                            ></i>
+                            <a
+                                href="tell:+8801712345678"
+                                class="font-semibold text-text hover:text-secondary duration-300"
+                                >+880 1712 345678</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-6 shrink-0 w-full sm:w-auto">
+                    <h2
+                        class="text-lg sm:text-xl text-text font-bold font-philosopher"
+                    >
+                        Bank Transfer
+                    </h2>
+                    <div
+                        class="p-6 rounded-xl border border-primary/20 flex flex-col gap-3"
+                    >
+                        <ul class="flex flex-col gap-3">
+                            <li class="text-text">
+                                Bank
+                                <span class="font-bold">: Pubali Bank PLC</span>
+                            </li>
+                            <li class="text-text">
+                                Branch
+                                <span class="font-bold"
+                                    >: Hetimgonj, Sylhet</span
+                                >
+                            </li>
+                            <li class="text-text">
+                                Routing No
+                                <span class="font-bold">: 175911758</span>
+                            </li>
+                            <li class="text-text">
+                                Account
+                                <span class="font-bold"
+                                    >: Baitul Haque Jame Masjid</span
+                                >
+                            </li>
+                            <li class="text-text">
+                                Account No
+                                <span class="font-bold">: 4327101045456</span>
+                            </li>
+                            <li class="text-text">
+                                Swift Code
+                                <span class="font-bold">: PUBABDDH</span>
+                            </li>
+                        </ul>
+                        <p class="font-philosopher text-sm">
+                            Please include your name as reference.<span
+                                class="text-red-600 text-sm"
+                                >*</span
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright Section -->
+            <div class="py-2.5 text-center bg-bg border-t border-secondary">
+                <p class="text-xs sm:text-sm font-philosopher text-primary">
+                    &copy; 2026 Baitul Haque Jame Masjid. All rights reserved.
+                </p>
+            </div>
+        </footer>
+        <!-- ======== Footer Section Ends Here ======== -->
 
-    <!-- ======== Footer Section Starts Here ======== -->
-    <footer class="border-t border-primary/40">
-      <div
-        class="pt-15 pb-10 max-width flex flex-wrap lg:flex-nowrap xl:gap-20 lg:gap-10 gap-5 justify-between"
-      >
-        <div class="flex flex-col gap-6 w-full lg:w-[25%] shrink-0">
-          <img
-            src="./src/assets/images/logo.png"
-            alt="Brand Logo"
-            width="150"
-            height="58"
-            class="object-contain shrink-0"
-          />
-          <p class="text-text leading-6.5">
-            A blessed house of Allah, dedicated to prayer, learning, unity, and
-            serving the community with faith and compassion.
-          </p>
-          <a
-            href="/"
-            class="py-2 px-4 bg-primary hover:bg-hover duration-300 rounded-md text-container font-bold flex items-center justify-center gap-2 md:max-w-52 lg:max-w-full"
-            ><span>Donate Now</span
-            ><img
-              src="./src/assets/icons/circle-arrow-right.svg"
-              alt="Circle Arrow Right"
-              class="size-5"
-          /></a>
-        </div>
-        <div class="flex flex-col gap-6 sm:shrink-0">
-          <h2 class="text-lg sm:text-xl text-text font-bold font-philosopher">
-            Quick Links
-          </h2>
-          <ul class="flex flex-col gap-2 sm:gap-4">
-            <li>
-              <a
-                href="/"
-                class="font-semibold text-text hover:text-secondary duration-300"
-                >Homepage</a
-              >
-            </li>
-            <li>
-              <a
-                href="/"
-                class="font-semibold text-text hover:text-secondary duration-300"
-                >Prayer Times</a
-              >
-            </li>
-            <li>
-              <a
-                href="/"
-                class="font-semibold text-text hover:text-secondary duration-300"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a
-                href="/"
-                class="font-semibold text-text hover:text-secondary duration-300"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a
-                href="/"
-                class="font-semibold text-text hover:text-secondary duration-300"
-                >Terms & Condition</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-6 sm:shrink-0">
-          <h2 class="text-lg sm:text-xl text-text font-bold font-philosopher">
-            Contact
-          </h2>
-          <ul class="flex flex-col gap-2 sm:gap-4">
-            <li class="flex items-start gap-5">
-              <span class="mt-1"
-                ><i class="fa-solid fa-location-dot text-primary text-lg"></i
-              ></span>
-              <address class="not-italic text-text font-medium">
-                Kayestogram (Kushumbag),<br />
-                Hetimgonj, Golapgonj, Sylhet
-              </address>
-            </li>
-            <li class="flex items-center gap-5">
-              <img
-                src="./src/assets/icons/light_mail-rounded.svg"
-                alt="Light Mail Rounded Icon"
-                class="size-5 object-contain"
-              />
-              <a
-                href="mailto:info@example.com"
-                class="font-semibold text-text hover:text-secondary duration-300"
-                >info@example.com</a
-              >
-            </li>
-            <li class="flex items-center gap-5">
-              <i
-                class="fa-solid fa-phone text-primary text-sm sm:text-base"
-              ></i>
-              <a
-                href="tell:+8801712345678"
-                class="font-semibold text-text hover:text-secondary duration-300"
-                >+880 1712 345678</a
-              >
-            </li>
-            <li class="flex items-center gap-5">
-              <i
-                class="fa-solid fa-phone text-primary text-sm sm:text-base"
-              ></i>
-              <a
-                href="tell:+8801712345678"
-                class="font-semibold text-text hover:text-secondary duration-300"
-                >+880 1712 345678</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-6 shrink-0 w-full sm:w-auto">
-          <h2 class="text-lg sm:text-xl text-text font-bold font-philosopher">
-            Bank Transfer
-          </h2>
-          <div
-            class="p-6 rounded-xl border border-primary/20 flex flex-col gap-3"
-          >
-            <ul class="flex flex-col gap-3">
-              <li class="text-text">
-                Bank <span class="font-bold">: Pubali Bank PLC</span>
-              </li>
-              <li class="text-text">
-                Branch <span class="font-bold">: Hetimgonj, Sylhet</span>
-              </li>
-              <li class="text-text">
-                Routing No <span class="font-bold">: 175911758</span>
-              </li>
-              <li class="text-text">
-                Account
-                <span class="font-bold">: Baitul Haque Jame Masjid</span>
-              </li>
-              <li class="text-text">
-                Account No <span class="font-bold">: 4327101045456</span>
-              </li>
-              <li class="text-text">
-                Swift Code <span class="font-bold">: PUBABDDH</span>
-              </li>
-            </ul>
-            <p class="font-philosopher text-sm">
-              Please include your name as reference.<span
-                class="text-red-600 text-sm"
-                >*</span
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Copyright Section -->
-      <div class="py-2.5 text-center bg-bg border-t border-secondary">
-        <p class="text-xs sm:text-sm font-philosopher text-primary">
-          &copy; 2026 Baitul Haque Jame Masjid. All rights reserved.
-        </p>
-      </div>
-    </footer>
-    <!-- ======== Footer Section Ends Here ======== -->
-  </body>
+        <script src="./src/js/index.js"></script>
+    </body>
 </html>
