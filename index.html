@@ -268,7 +268,7 @@
 
             <div class="pt-6 grid grid-cols-6 gap-7.5">
                 <div
-                    class="col-span-2 p-4 border border-[rgb(32,102,92)]/10 rounded-xl"
+                    class="col-span-3 lg:col-span-2 p-4 border border-[rgb(32,102,92)]/10 rounded-xl"
                 >
                     <div
                         class="p-1.25 border border-[rgb(32,102,92)]/10 size-12 rounded-md flex justify-center items-center"
@@ -295,7 +295,7 @@
                     </ul>
                 </div>
                 <div
-                    class="col-span-2 p-4 border border-[rgb(32,102,92)]/10 rounded-xl"
+                    class="col-span-3 lg:col-span-2 p-4 border border-[rgb(32,102,92)]/10 rounded-xl"
                 >
                     <div
                         class="p-1.25 border border-[rgb(32,102,92)]/20 size-12 rounded-md flex justify-center items-center"
@@ -343,7 +343,7 @@
                     </ul>
                 </div>
                 <div
-                    class="col-span-2 p-4 border border-[rgb(32,102,92)]/10 rounded-xl"
+                    class="col-span-3 lg:col-span-2 p-4 border border-[rgb(32,102,92)]/10 rounded-xl"
                 >
                     <div
                         class="p-1.25 border border-[rgb(32,102,92)]/20 size-12 rounded-md flex justify-center items-center"
@@ -372,51 +372,79 @@
                     </div>
                 </div>
                 <div
-                    class="col-span-3 p-4 border border-[rgb(32,102,92)]/10 rounded-xl"
+                    class="col-span-3 p-4 border border-[rgb(32,102,92)]/10 rounded-xl flex gap-5 justify-between items-center"
                 >
                     <div>
                         <div
                             class="p-1.25 border border-[rgb(32,102,92)]/20 size-12 rounded-md flex justify-center items-center"
                         >
                             <img
-                                class="size-8"
+                                class="size-8 rounded-md"
                                 src="./src/assets/images/icons/zakat.svg"
                                 alt=""
                             />
                         </div>
-                        <h4>Zakat (Almsgiving)</h4>
-                        <p>
+                        <h4
+                            class="mt-4 font-philosopher font-bold text-primary"
+                        >
+                            Zakat (Almsgiving)
+                        </h4>
+                        <p
+                            class="mt-4 text-sm leading-6 font-nunito max-w-83.25"
+                        >
                             The mandatory charitable contribution of 2.5% of
                             one’s wealth to help the poor and needy, purifying
                             one’s soul and finances.
                         </p>
                     </div>
-                    <div>
-                        <p>2.5%</p>
-                        <span>Wealth Ratio</span>
+                    <div
+                        class="size-50 bacground-cover background-center flex flex-col justify-center items-center text-white"
+                        style="
+                            background-image: url(&quot;./src/assets/images/zakatRatioBg.jpg&quot;);
+                        "
+                    >
+                        <p
+                            class="font-philosopher font-bold leading-10 text-[32px]"
+                        >
+                            2.5%
+                        </p>
+                        <p class="font-philosopher font-bold text-[20px]">
+                            Wealth Ratio
+                        </p>
                     </div>
                 </div>
                 <div
-                    class="col-span-3 p-4 border border-[rgb(32,102,92)]/10 rounded-xl"
+                    class="col-span-3 p-4 border border-[rgb(32,102,92)]/10 rounded-xl flex justify-center items-center gap-5"
                 >
                     <div>
                         <div
                             class="p-1.25 border border-[rgb(32,102,92)]/20 size-12 rounded-md flex justify-center items-center"
                         >
                             <img
+                                class="w-full"
                                 src="./src/assets/images/icons/kaaba.svg"
                                 alt=""
                             />
                         </div>
-                        <h4>Hajj (Pilgrimage)</h4>
-                        <p>
+                        <h4
+                            class="mt-4 font-philosopher font-bold text-primary"
+                        >
+                            Hajj (Pilgrimage)
+                        </h4>
+                        <p
+                            class="mt-4 text-sm leading-6 font-nunito max-w-83.25"
+                        >
                             The pilgrimage to the holy city of Mecca, a duty for
                             every Muslim who is physically and financially able
                             at least once in their lifetime.
                         </p>
                     </div>
                     <div>
-                        <img src="./src/assets/images/HajjBg.jpg" alt="" />
+                        <img
+                            class="size-50"
+                            src="./src/assets/images/HajjBg.jpg"
+                            alt=""
+                        />
                     </div>
                 </div>
             </div>

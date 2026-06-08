@@ -314,6 +314,10 @@
     width: calc(var(--spacing) * 12);
     height: calc(var(--spacing) * 12);
   }
+  .size-50 {
+    width: calc(var(--spacing) * 50);
+    height: calc(var(--spacing) * 50);
+  }
   .h-61 {
     height: calc(var(--spacing) * 61);
   }
@@ -368,8 +372,17 @@
   .max-w-67 {
     max-width: calc(var(--spacing) * 67);
   }
+  .max-w-68 {
+    max-width: calc(var(--spacing) * 68);
+  }
+  .max-w-70 {
+    max-width: calc(var(--spacing) * 70);
+  }
   .max-w-77\.5 {
     max-width: calc(var(--spacing) * 77.5);
+  }
+  .max-w-83\.25 {
+    max-width: calc(var(--spacing) * 83.25);
   }
   .max-w-180 {
     max-width: calc(var(--spacing) * 180);
@@ -383,6 +396,9 @@
   .max-w-220\.5 {
     max-width: calc(var(--spacing) * 220.5);
   }
+  .max-w-\[33px\] {
+    max-width: 33px;
+  }
   .max-w-\[200px\] {
     max-width: 200px;
   }
@@ -394,6 +410,9 @@
   }
   .max-w-\[320px\] {
     max-width: 320px;
+  }
+  .max-w-\[333px\] {
+    max-width: 333px;
   }
   .max-w-\[586px\] {
     max-width: 586px;
@@ -524,6 +543,9 @@
   }
   .overflow-clip {
     overflow: clip;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
@@ -765,6 +787,15 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .text-\[20px\] {
+    font-size: 20px;
+  }
+  .text-\[28px\] {
+    font-size: 28px;
+  }
+  .text-\[32px\] {
+    font-size: 32px;
+  }
   .text-\[48px\] {
     font-size: 48px;
   }
@@ -783,6 +814,10 @@
   .leading-9 {
     --tw-leading: calc(var(--spacing) * 9);
     line-height: calc(var(--spacing) * 9);
+  }
+  .leading-10 {
+    --tw-leading: calc(var(--spacing) * 10);
+    line-height: calc(var(--spacing) * 10);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -1050,6 +1085,16 @@
   .lg\:col-span-1 {
     @media (width >= 64rem) {
       grid-column: span 1 / span 1;
+    }
+  }
+  .lg\:col-span-2 {
+    @media (width >= 64rem) {
+      grid-column: span 2 / span 2;
+    }
+  }
+  .lg\:col-span-3 {
+    @media (width >= 64rem) {
+      grid-column: span 3 / span 3;
     }
   }
   .lg\:col-start-auto {
