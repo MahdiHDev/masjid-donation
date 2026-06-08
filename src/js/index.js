@@ -6,6 +6,8 @@ const closeBtn = sidePanel.querySelector("#closeMenu");
 const sidepanelLinks = sidePanel.querySelectorAll("#sidepanel-links li a");
 const languageToggle = document.getElementById("languageToggle");
 const languageOptions = document.getElementById("languageOptions");
+const btnEn = document.getElementById("btn-en");
+const btnBn = document.getElementById("btn-bn");
 
 menuBtn.addEventListener("click", () => {
     // sidePanel.style.display = "block";
@@ -58,3 +60,35 @@ languageToggle.addEventListener("click", () => {
         );
     }
 });
+
+// Language Switching
+const activeClasses = ["bg-primary", "text-container"];
+const inactiveClasses = ["bg-transparent", "text-text"];
+
+function setLang(lang) {
+    const isBangla = lang === "bn";
+
+    document.body.classList.toggle("bangla", isBangla);
+    localStorage.setItem("lang", lang);
+
+    // Active button styling
+    if (isBangla) {
+        btnBn.classList.add(...activeClasses);
+        btnBn.classList.remove(...inactiveClasses);
+        btnEn.classList.add(...inactiveClasses);
+        btnEn.classList.remove(...activeClasses);
+    } else {
+        btnEn.classList.add(...activeClasses);
+        btnEn.classList.remove(...inactiveClasses);
+        btnBn.classList.add(...inactiveClasses);
+        btnBn.classList.remove(...activeClasses);
+    }
+}
+
+// Restore saved language on page load
+const saved = localStorage.getItem("lang") || "en";
+setLang(saved);
+
+// Button click listeners
+btnEn.addEventListener("click", () => setLang("en"));
+btnBn.addEventListener("click", () => setLang("bn"));
